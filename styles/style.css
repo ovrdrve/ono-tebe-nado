@@ -211,7 +211,44 @@
 /* about */
 
 .about {
-  padding: 0 24px 180px;
+  padding: 0 24px 180px 71px;
+}
+
+.about__column {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 71px;
+}
+
+.about__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 240px;
+  background-color: black;
+  border-radius: 150px;
+}
+
+.about__logo-image {
+  width: 142px;
+}
+
+.about__title {
+  text-transform: uppercase;
+  margin: 101px 0 100px 0;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.about__text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 24px;
+  letter-spacing: 0.004em;
 }
 
 /* footer */
