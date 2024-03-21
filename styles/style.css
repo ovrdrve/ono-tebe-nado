@@ -30,7 +30,7 @@
   text-decoration: none;
 }
 
-.header__address {
+.address {
   padding-right: 37px;
   justify-self: end;
   font-weight: normal;
@@ -40,14 +40,13 @@
   letter-spacing: 0;
 }
 
-.header__address a {
+.address a {
   letter-spacing: 0.01em;
   text-underline-offset: 4px;
 }
 
 .cover {
   position: relative;
-  z-index: -2;
   padding: 165px 50px 51px;
   color: white;
   text-transform: uppercase;
@@ -63,11 +62,13 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: -1;
+  z-index: 1;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
 .cover__title {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -83,8 +84,8 @@
 }
 
 .aligned-text_center {
-  margin: 0 345px 0 286px;
   line-height: 100%;
+  text-align: center;
 }
 
 .aligned-text_right {
@@ -104,6 +105,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 2;
 }
 
 .cover__description-text {
@@ -115,7 +118,7 @@
 }
 
 .bet-button {
-  border: 1px solid white;
+  border: 1px solid currentColor;
   padding: 11px 32px 11px 31px;
   color: white;
   font-family: Raleway, sans-serif;
@@ -140,11 +143,14 @@
 .lots__card-list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding: 27px 0 30px 0;
   list-style: none;
 }
 
 .lots__card-list-item {
+  margin-bottom: 25px;
+  flex-grow: 1;
   max-width: 334px;
   min-height: 563px;
 }
@@ -156,7 +162,6 @@
 
 .card {
   position: relative;
-  z-index: -2;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -187,12 +192,16 @@
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
   text-transform: uppercase;
+  position: relative;
+  z-index: 2;
 }
 
 .card__text {
   font-weight: normal;
   font-size: 20px;
   line-height: 120%;
+  position: relative;
+  z-index: 2;
 }
 
 .lots__look-more-link {
@@ -220,7 +229,7 @@
   width: 240px;
   height: 240px;
   background-color: black;
-  border-radius: 120px;
+  border-radius: 50%;
 }
 
 .about__logo-image {
